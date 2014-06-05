@@ -1,0 +1,47 @@
+﻿<?xml version="1.0"?>
+<Template Orginator="Stephen Byrne" Created="06/03/2014" LastModified="06/03/2014">
+	<TemplateConfiguration>
+		<_Name>MonoGame Linux Application</_Name>
+        <_Category>C#/MonoGame</_Category>
+        <Icon>monogame-project</Icon>
+        <LanguageName>C#</LanguageName>
+        <_Description>Creates an MonoGame Project for Linux</_Description>
+	</TemplateConfiguration>
+	<Actions>
+		<Open filename = "Game1.cs"/>
+	</Actions>
+	<Combine name = "${ProjectName}" directory = ".">
+		<Options>
+			<StartupProject>${ProjectName}</StartupProject>
+		</Options>
+		<Project name = "${ProjectName}" directory = "." type = "MonoGame">
+			<Options TargetFrameworkVersion="4.0" MonoGamePlatform="Linux"/>
+			<References>
+				<Reference type="Gac" refto="System" />
+				<Reference type="Gac" refto="System.Xml" />
+				<Reference type="Gac" refto="System.Core" />
+				<Reference type="Assembly" refto="packages/MonoGame.Framework.dll" SpecificVersion="true" LocalCopy="true"/>
+				<Reference type="Assembly" refto="packages/Lidgren.Network.dll" SpecificVersion="true" LocalCopy="true"/>
+				<Reference type="Assembly" refto="packages/OpenTK.dll" SpecificVersion="true" LocalCopy="true"/>
+				<Reference type="Assembly" refto="packages/Tao.Sdl.dll" SpecificVersion="true" LocalCopy="true"/>
+			</References>
+			<Files>
+				<Directory name="packages">
+					<RawFile name="MonoGame.Framework.dll" src="MonoGameApplication/assemblies/Linux/MonoGame.Framework.dll" />
+					<RawFile name="Lidgren.Network.dll" src="MonoGameApplication/assemblies/Linux/Lidgren.Network.dll" />
+					<RawFile name="Lidgren.Network.dll" src="MonoGameApplication/assemblies/Linux/OpenTK.dll" />
+					<RawFile name="Lidgren.Network.dll" src="MonoGameApplication/assemblies/Linux/Tao.Sdl.dll" />
+				</Directory>
+				<File name="Game1.cs" src="MonoGameApplication/Game1.cs" />
+				<File name="Program.cs" src="MonoGameApplication/Program.cs" />
+				<RawFile name="Icon.png" src="MonoGameApplication/Icon-md.png" />
+				<Directory name="Properties">
+					<File name="AssemblyInfo.cs" src="MonoGameApplication/AssemblyInfo.cs" />
+				</Directory>
+				<Directory name="Assets">
+					<RawFile name="logo.png" src="MonoGameApplication/Icon-hd.png" />
+				</Directory>
+			</Files>
+		</Project>
+	</Combine>
+</Template>

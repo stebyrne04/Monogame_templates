@@ -1,0 +1,102 @@
+﻿<Addin id          = "MonoGame"
+       namespace   = "MonoDevelop"
+       name        = "MonoGame"
+       author      = "Stephen Byrne"
+       copyright   = "GPL"
+       url         = "http://www.monogame.net/" 
+       description = "C# templates for MonoGame"
+	   category    = "Mono Game"
+       version     = "3.2.0">
+	<Runtime>
+		<Import file="icons/monogame-32.png" />
+		<Import file="icons/monogame-project-32.png"/>
+		<Import file="icons/monogame-project-android-32.png"/>
+		<Import file="icons/monogame-project-ios-32.png"/>
+		<Import file="MonoGameEmptyClass.xft.xml" />
+		<Import file="MonoGameClass.xft.xml" />
+		<Import file="MonoGameGameComponent.xft.xml" />
+		<Import file="templates/MonoGameAndroidProject.xpt.xml" />
+		<Import file="templates/MonoGameIOSProject.xpt.xml" />
+		<Import file="templates/MonoGameLinuxProject.xpt.xml" />
+		<Import file="templates/MonoGameMacProject.xpt.xml" />
+		<Import file="templates/MonoGameOUYAProject.xpt.xml" />
+		<Import file="templates/MonoGameWindowsGLProject.xpt.xml" />
+		<Import file="templates/MonoGameWindowsProject.xpt.xml" />
+		<Import file="templates/MonoGameApplication/AboutAssets.txt"/>
+		<Import file="templates/MonoGameApplication/AboutContent.txt"/>
+		<Import file="templates/MonoGameApplication/AboutResources.txt"/>
+		<Import file="templates/MonoGameApplication/Activity1.cs"/>
+		<Import file="templates/MonoGameApplication/AndroidAssemblyInfo.cs"/>
+		<Import file="templates/MonoGameApplication/AndroidGame1.cs"/>
+		<Import file="templates/MonoGameApplication/AssemblyInfo.cs"/>
+		<Import file="templates/MonoGameApplication/Game1.cs"/>
+		<Import file="templates/MonoGameApplication/Icon-hd.png"/>
+		<Import file="templates/MonoGameApplication/Icon-ld.png"/>
+		<Import file="templates/MonoGameApplication/Icon-md.png"/>
+		<Import file="templates/MonoGameApplication/MacGame.cs"/>
+		<Import file="templates/MonoGameApplication/MacGame.fs"/>
+		<Import file="templates/MonoGameApplication/MacInfo.plist"/>
+		<Import file="templates/MonoGameApplication/MacMain.cs"/>
+		<Import file="templates/MonoGameApplication/MacMain.fs"/>
+		<Import file="templates/MonoGameApplication/OUYAActivity1.cs"/>
+		<Import file="templates/MonoGameApplication/Program.cs"/>
+		<Import file="templates/MonoGameApplication/Resource.cs"/>
+		<Import file="templates/MonoGameApplication/Splash.png"/>
+		<Import file="templates/MonoGameApplication/Styles.xml"/>
+		<Import file="templates/MonoGameApplication/iOSAssemblyInfo.cs"/>
+		<Import file="templates/MonoGameApplication/iOSDefault.png"/>
+		<Import file="templates/MonoGameApplication/iOSGame.cs"/>
+		<Import file="templates/MonoGameApplication/iOSGameThumbnail.png"/>
+		<Import file="templates/MonoGameApplication/iOSInfo.plist"/>
+		<Import file="templates/MonoGameApplication/iOSMain.cs"/>
+		<Import file="templates/MonoGameApplication/assemblies/Android/Lidgren.Network.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/Android/MonoGame.Framework.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/IOS/Lidgren.Network.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/IOS/MonoGame.Framework.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/Linux/Lidgren.Network.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/Linux/MonoGame.Framework.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/Linux/OpenTK.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/Linux/Tao.Sdl.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/MacOS/Lidgren.Network.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/MacOS/MonoGame.Framework.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/MacOS/MonoMac.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/OUYA/Lidgren.Network.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/OUYA/MonoGame.Framework.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/OUYA/Ouya.Console.Api.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/WindowsDX/Lidgren.Network.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/WindowsDX/MonoGame.Framework.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/WindowsGL/Lidgren.Network.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/WindowsGL/MonoGame.Framework.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/WindowsGL/OpenTK.dll"/>
+		<Import file="templates/MonoGameApplication/assemblies/WindowsGL/Tao.Sdl.dll"/>
+	</Runtime>
+	<Dependencies>
+		<Addin id="Core" version="5.0" />
+		<Addin id="Ide" version="5.0" />
+	</Dependencies>
+    <Extension path="/MonoDevelop/Core/StockIcons">
+		<StockIcon stockid="monogame-icon" file="icons/monogame-32.png" />
+		<StockIcon stockid="monogame-project" file="icons/monogame-project-32.png" />
+		<StockIcon stockid="monogame-project-android" file="icons/monogame-project-android-32.png" />
+		<StockIcon stockid="monogame-project-ios" file="icons/monogame-project-ios-32.png"/>
+	</Extension>
+	<Extension path = "/MonoDevelop/Ide/FileTemplates">
+		<FileTemplate id="MonogameEmptyClass" file="MonoGameEmptyClass.xft.xml" />
+		<FileTemplate id="MonogameClass" file="MonoGameClass.xft.xml" />
+		<FileTemplate id="MonogameGameComponent" file="MonoGameGameComponent.xft.xml"/>
+	</Extension>
+	<Extension path="/MonoDevelop/Ide/ProjectTemplates">
+		<ProjectTemplate id="AndroidGame" file="templates/MonoGameAndroidProject.xpt.xml" />
+		<ProjectTemplate id="OUYAGame" file="templates/MonoGameOUYAProject.xpt.xml" />
+	<Condition id="Platform" value="mac">
+		<ProjectTemplate id="IOSGame" file="templates/MonoGameIOSProject.xpt.xml" />
+		<ProjectTemplate id="MacGame" file="templates/MonoGameMacProject.xpt.xml" />
+	</Condition>
+	<Condition id="Platform" value="windows">
+		<ProjectTemplate id="WindowsGame" file="templates/MonoGameWindowsProject.xpt.xml" />
+		<ProjectTemplate id="WindowsglGame" file="templates/MonoGameWindowsGLProject.xpt.xml" />
+	</Condition>
+		<ProjectTemplate id="WindowsglGame" file="templates/MonoGameLinuxProject.xpt.xml" />
+	</Extension>
+	
+</Addin>

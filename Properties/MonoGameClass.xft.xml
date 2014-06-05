@@ -1,0 +1,54 @@
+﻿<?xml version="1.0"?>
+<Template Originator="Stephen Byrne" Language="C#">
+	<TemplateConfiguration>
+		<_Name>C# MonoGame class</_Name>
+		<Icon>monogame-icon</Icon>
+		<_Category>MonoGame</_Category>
+		<LanguageName>C#</LanguageName>
+		<_Description>Creates a C# Monogame with construtor\LoadContent\Update and Draw class.</_Description>
+	</TemplateConfiguration>
+<TemplateFiles>
+		<File DefaultExtension=".cs" DefaultName="MonoGameClass">
+<![CDATA[using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.GamerServices;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Input.Touch;
+using Microsoft.Xna.Framework.Storage;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Media;
+
+namespace ${Namespace}
+{
+	class ${Name}
+	{
+		SpriteBatch classSpriteBatch;
+		public ${Name}(SpriteBatch spriteBatch){
+			// get games spriteBatch 
+			this.classSpriteBatch = spriteBatch;
+		}
+		public void LoadContent(){
+			// TODO: use Games content to load your content
+		}
+		public void Update(GameTime gameTime){
+			// TODO: Add your update logic here
+		}
+		public void Draw(GameTime gameTime){
+			// TODO: Add your drawing code here
+			// classSpriteBatch.Begin();
+			// classSpriteBatch.Draw(texture,position,color);
+			// classSpriteBatch.End();
+		}
+
+	}
+}
+]]>
+		</File>
+	</TemplateFiles>
+</Template>

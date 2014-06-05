@@ -1,0 +1,46 @@
+﻿<?xml version="1.0"?>
+<Template Orginator="Stephen Byrne" Created="06/03/2014" LastModified="06/03/2014">
+	<TemplateConfiguration>
+		<_Name>MonoGame IOS Application</_Name>
+        <_Category>C#/MonoGame</_Category>
+        <Icon>monogame-project-ios</Icon>
+        <LanguageName>C#</LanguageName>
+        <_Description>Creates an empty MonoGame iOS project.</_Description>
+	</TemplateConfiguration>
+	<Actions>
+	</Actions>
+	<Combine name = "${ProjectName}" directory = ".">
+		<Options>
+			<StartupProject>${ProjectName}</StartupProject>
+		</Options>
+		<Project name = "${ProjectName}" directory = "." type = "IPhone">
+			<Options MonoGamePlatform="iOS"/>
+			<References>
+				<Reference type="Gac" refto="System, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+				<Reference type="Gac" refto="System.Xml, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+				<Reference type="Gac" refto="System.Core, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />				
+				<Reference type="Gac" refto="monotouch" />
+				<Reference type="Gac" refto="OpenTK" />
+				<Reference type="Assembly" refto="packages/MonoGame.Framework.dll" SpecificVersion="true" LocalCopy="true"/>
+				<Reference type="Assembly" refto="packages/Lidgren.Network.dll" SpecificVersion="true" LocalCopy="true"/>
+			</References>
+			<Files>
+				<Directory name="packages">
+					<RawFile name="MonoGame.Framework.dll" src="MonoGameApplication/assemblies/IOS/MonoGame.Framework.dll" />
+					<RawFile name="Lidgren.Network.dll" src="MonoGameApplication/assemblies/IOS/Lidgren.Network.dll" />
+				</Directory>
+				<File name="Game1.cs" AddStandardHeader="True" src="MonoGameApplication/iOSGame.cs" />
+				<File name="Main.cs" AddStandardHeader="True" src="MonoGameApplication/iOSMain.cs" />
+				<File name="Info.plist" AddStandardHeader="False" src="MonoGameApplication/iOSInfo.plist" />
+				<RawFile name="Default.png" src="MonoGameApplication/iOSDefault.png" />
+				<RawFile name="GameThumbnail.png" src="MonoGameApplication/iOSGameThumbnail.png" />
+				<Directory name="Assets">
+					<RawFile name="logo.png" src="MonoGameApplication/Icon-hd.png" />
+				</Directory>
+				<Directory name="Properties">
+					<File name="AssemblyInfo.cs" AddStandardHeader="True" src="MonoGameApplication/iOSAssemblyInfo.cs" />
+				</Directory>
+			</Files>
+		</Project>
+	</Combine>
+</Template>
