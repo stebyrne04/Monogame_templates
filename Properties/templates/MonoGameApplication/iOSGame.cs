@@ -19,6 +19,7 @@ using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Media;
 
+
 #endregion
 
 namespace ${Namespace}
@@ -40,7 +41,11 @@ namespace ${Namespace}
         public Game1()  
         {
 
-			graphics = new GraphicsDeviceManager(this);
+			graphics = new GraphicsDeviceManager(this){ 
+					SupportedOrientations = DisplayOrientation.Portrait 
+					| DisplayOrientation.PortraitDown
+					| DisplayOrientation.LandscapeLeft 
+					| DisplayOrientation.LandscapeRight };
 			
 			Content.RootDirectory = "Assets";
 

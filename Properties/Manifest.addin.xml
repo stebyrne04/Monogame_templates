@@ -6,7 +6,7 @@
        url         = "http://www.monogame.net/" 
        description = "C# templates for MonoGame"
 	   category    = "Mono Game"
-       version     = "3.2.0">
+       version     = "3.2.0.1">
 	<Runtime>
 		<Import file="icons/monogame-32.png" />
 		<Import file="icons/monogame-project-32.png"/>

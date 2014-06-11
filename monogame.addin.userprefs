@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Properties/Manifest.addin.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Properties/templates/MonoGameApplication/iOSGame.cs">
     <Files>
-      <File FileName="Properties/Manifest.addin.xml" Line="43" Column="61" />
+      <File FileName="Properties/Manifest.addin.xml" Line="1" Column="1" />
+      <File FileName="Properties/templates/MonoGameApplication/iOSGame.cs" Line="21" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
