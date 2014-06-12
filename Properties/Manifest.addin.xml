@@ -6,7 +6,7 @@
        url         = "http://www.monogame.net/" 
        description = "C# templates for MonoGame"
 	   category    = "Mono Game"
-       version     = "3.2.0.1">
+       version     = "3.2.0.2">
 	<Runtime>
 		<Import file="icons/monogame-32.png" />
 		<Import file="icons/monogame-project-32.png"/>
@@ -91,12 +91,9 @@
 	<Condition id="Platform" value="mac">
 		<ProjectTemplate id="IOSGame" file="templates/MonoGameIOSProject.xpt.xml" />
 		<ProjectTemplate id="MacGame" file="templates/MonoGameMacProject.xpt.xml" />
-	</Condition>
-	<Condition id="Platform" value="windows">
-		<ProjectTemplate id="WindowsGame" file="templates/MonoGameWindowsProject.xpt.xml" />
-		<ProjectTemplate id="WindowsglGame" file="templates/MonoGameWindowsGLProject.xpt.xml" />
-	</Condition>
 		<ProjectTemplate id="WindowsglGame" file="templates/MonoGameLinuxProject.xpt.xml" />
+	</Condition>
+		
 	</Extension>
 	
 </Addin>

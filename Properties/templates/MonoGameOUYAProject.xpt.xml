@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0"?>
 <Template Orginator="Stephen Byrne" Created="06/03/2014" LastModified="06/03/2014">
 	<TemplateConfiguration>
-		<_Name>MonoGame OUYA Application</_Name>
+        <_Name>MonoGame OUYA Application</_Name>
         <_Category>C#/MonoGame</_Category>
         <Icon>monogame-project-android</Icon>
         <LanguageName>C#</LanguageName>
-        <_Description>Creates an MonoGame Project for OUYA</_Description>
+        <_Description>Creates an empty MonoGame OUYA project.</_Description>
 	</TemplateConfiguration>
 	<Actions>
 	</Actions>
@@ -14,7 +14,11 @@
 			<StartupProject>${ProjectName}</StartupProject>
 		</Options>
 		<Project name = "${ProjectName}" directory = "." type = "MonoDroid">
-			<Options MonoGamePlatform="OUYA" AndroidApplication="true" AndroidResgenFile="Resources/Resource.designer.cs" AndroidResgenClass="Resource"/>
+			<Options MonoGamePlatform="Android"
+					 AndroidApplication="true"
+					 TargetFrameworkVersion="MonoAndroid,Version=v4.1"
+					 AndroidResgenFile="Resources/Resource.designer.cs"
+					 AndroidResgenClass="Resource"/>
 			<References>
 				<Reference type="Gac" refto="System, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
 				<Reference type="Gac" refto="System.Xml, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
@@ -31,7 +35,7 @@
 					<RawFile name="MonoGame.Framework.dll" src="MonoGameApplication/assemblies/OUYA/MonoGame.Framework.dll" />
 					<RawFile name="Lidgren.Network.dll" src="MonoGameApplication/assemblies/OUYA/Lidgren.Network.dll" />
 				</Directory>
-					<File name="Activity1.cs" src="MonoGameApplication/OUYAActivity1.cs" />
+				<File name="Activity1.cs" src="MonoGameApplication/Activity1.cs" />
 				<File name="Game1.cs" src="MonoGameApplication/AndroidGame1.cs" />
 				<Directory name="Resources">
 					<File name="Resource.designer.cs" src="MonoGameApplication/Resource.cs" />
