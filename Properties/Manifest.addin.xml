@@ -80,6 +80,12 @@
 		<StockIcon stockid="monogame-project-android" file="icons/monogame-project-android-32.png" />
 		<StockIcon stockid="monogame-project-ios" file="icons/monogame-project-ios-32.png"/>
 	</Extension>
+	<Extension path="/MonoDevelop/ProjectModel/MSBuildItemsTypes">
+		<DotNetProjectSubType id="MonoGame" guid="{9b831fef-f496-498f-9fe8-180da5cb4258}" type="MonoDevelop.MonoGame.MonoGameProject"></DotNetProjectSubType>
+	</Extension>
+	<Extension path="/MonoDevelop/ProjectModel/ProjectBindings">
+		<ProjectBindings id="MonoGame" class="MonoDevelop.MonoGame.MonoGameProjectBinding"/>
+	</Extension>
 	<Extension path = "/MonoDevelop/Ide/FileTemplates">
 		<FileTemplate id="MonogameEmptyClass" file="MonoGameEmptyClass.xft.xml" />
 		<FileTemplate id="MonogameClass" file="MonoGameClass.xft.xml" />
@@ -91,9 +97,9 @@
 	<Condition id="Platform" value="mac">
 		<ProjectTemplate id="IOSGame" file="templates/MonoGameIOSProject.xpt.xml" />
 		<ProjectTemplate id="MacGame" file="templates/MonoGameMacProject.xpt.xml" />
-		<ProjectTemplate id="WindowsglGame" file="templates/MonoGameLinuxProject.xpt.xml" />
+		<ProjectTemplate id="Linux" file="templates/MonoGameLinuxProject.xpt.xml" />
 	</Condition>
-		
+		<ProjectTemplate id="WindowsGame" file="templates/MonoGameWindowsProject.xpt.xml" />
 	</Extension>
 	
 </Addin>

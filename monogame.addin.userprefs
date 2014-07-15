@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Properties/Manifest.addin.xml">
     <Files>
-      <File FileName="Properties/Manifest.addin.xml" Line="10" Column="11" />
+      <File FileName="Properties/MonoGameProject.cs" Line="20" Column="22" />
+      <File FileName="Properties/Manifest.addin.xml" Line="102" Column="31" />
+      <File FileName="Properties/AssemblyInfo.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
